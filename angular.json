@@ -28,10 +28,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/ngx-boxy-svg/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
+            "polyfills": ["zone.js", "zone.js/testing"]
           }
         }
       }
@@ -49,18 +46,19 @@
             "outputPath": "dist/test-app",
             "index": "projects/test-app/src/index.html",
             "browser": "projects/test-app/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/test-app/tsconfig.app.json",
             "assets": [
               "projects/test-app/src/favicon.ico",
-              "projects/test-app/src/assets"
+              "projects/test-app/src/assets",
+              {
+                "glob": "**/*",
+                "input": "projects/test-app/boxy-svg",
+                "output": "libs/boxy-svg"
+              }
             ],
-            "styles": [
-              "projects/test-app/src/styles.css"
-            ],
-            "scripts": []
+            "styles": ["projects/test-app/src/styles.css"],
+            "scripts": ["projects/test-app/src/boxy-svg/component.js"]
           },
           "configurations": {
             "production": {
@@ -107,18 +105,13 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/test-app/tsconfig.spec.json",
             "assets": [
               "projects/test-app/src/favicon.ico",
               "projects/test-app/src/assets"
             ],
-            "styles": [
-              "projects/test-app/src/styles.css"
-            ],
+            "styles": ["projects/test-app/src/styles.css"],
             "scripts": []
           }
         }

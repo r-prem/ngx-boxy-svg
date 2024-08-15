@@ -42,3 +42,4 @@ testem.log
 Thumbs.db
 
 # test files
+/projects/test-app/boxy-svg

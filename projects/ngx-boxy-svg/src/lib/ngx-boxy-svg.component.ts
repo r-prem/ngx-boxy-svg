@@ -3,7 +3,6 @@ import {
   Component,
   ElementRef,
   EventEmitter,
-  inject,
   Input,
   OnInit,
   Output,
@@ -18,17 +17,12 @@ import {
 
 @Component({
   selector: 'ngx-boxy-svg',
-  standalone: true,
-  imports: [],
   exportAs: 'ngxBoxySvg',
   template: '',
   styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NgxBoxySvgComponent implements OnInit {
-  private service: NgxBoxySvgService = inject(NgxBoxySvgService);
-  private elRef: ElementRef = inject(ElementRef);
-
   private boxyElement: any | null = null;
 
   private notLoadedMessage: string = 'Boxy SVG element is not initialized';
@@ -131,18 +125,25 @@ export class NgxBoxySvgComponent implements OnInit {
    */
 
   /**
-   * If this is set, the BoxySVG Script will be loaded from this base path,
-   * instead of the default Boxy SVG website (https://boxy-svg.com/embed.js)
-   * @example '/library/boxy-svg/component.js'
+   * If this is set, the BoxySVG Script will be not be loaded from the default Boxy SVG website.
+   * But it will be loaded from the given path.
+   * @example
+   * Set this in the angular.json file:
+   * scripts: ["path/to/boxy-svg/component.js"]
+   *
    */
-  @Input() basePath: string | undefined;
+  @Input() localPath: string | undefined;
+
+  constructor(
+    private service: NgxBoxySvgService,
+    private elRef: ElementRef,
+  ) {}
 
   ngOnInit() {
-    if (this.basePath) {
-      /**
-       * No need to load the script if it's locally included via the angular.json file
-       */
-      this.createBoxySvgElement();
+    if (this.localPath) {
+      this.service.loadLocalScript('libs/boxy-svg/component.js').then(() => {
+        this.createBoxySvgElement();
+      });
     } else {
       this.service.loadScript().then(() => {
         this.createBoxySvgElement();

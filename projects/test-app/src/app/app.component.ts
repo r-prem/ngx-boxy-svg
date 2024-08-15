@@ -1,13 +1,20 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  ViewChild,
+} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgxBoxySvgComponent } from '../../../ngx-boxy-svg/src/lib/ngx-boxy-svg.component';
+import { NgxBoxySvgModule } from '../../../ngx-boxy-svg/src/lib/ngx-boxy-svg.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgxBoxySvgComponent],
+  imports: [RouterOutlet, NgxBoxySvgModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppComponent implements AfterViewInit {
   title = 'test-app';
