@@ -120,11 +120,6 @@ export class NgxBoxySvgComponent implements OnInit {
   private _loaded: boolean = false;
 
   /**
-   * TODO: should also be usable locally and not just via the Boxy SVG website
-   * add an input parameter to specify the URL of the Boxy SVG script
-   */
-
-  /**
    * If this is set, the BoxySVG Script will be not be loaded from the default Boxy SVG website.
    * But it will be loaded from the given path.
    * @example
