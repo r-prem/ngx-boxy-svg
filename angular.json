@@ -58,7 +58,7 @@
               }
             ],
             "styles": ["projects/test-app/src/styles.css"],
-            "scripts": ["projects/test-app/src/boxy-svg/component.js"]
+            "scripts": ["projects/test-app/boxy-svg/component.js"]
           },
           "configurations": {
             "production": {
