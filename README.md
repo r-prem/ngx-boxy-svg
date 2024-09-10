@@ -6,7 +6,7 @@ This library acts as a wrapper to provide a simple way to include boxy-svg (http
 This component integrates the powerful Boxy SVG editor into your Angular application, providing a rich set of features for SVG manipulation and export.
 
 ## Compatibility
-This library was created with backwards capability in mind. It should work with Angular 14 and above.
+This library was created with backwards compatibility in mind. It should work with Angular 14 and above.
 
 ## Installation
 
