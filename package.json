@@ -1,15 +1,16 @@
 {
   "name": "ngx-boxy-svg",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build ngx-boxy-svg",
     "watch": "ng build ngx-boxy-svg --watch --configuration development",
     "test": "ng test",
-    "publish": "npm login && cd dist/ngx-boxy-svg && npm publish --access public"
+    "publish": "npm login && cd dist/ngx-boxy-svg && npm publish --access public",
+    "build_and_publish": "npm run build && npm run publish"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^17.1.0",
     "@angular/common": "^17.1.0",
