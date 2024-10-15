@@ -201,6 +201,9 @@ export class NgxBoxySvgComponent implements OnInit {
     if (this.panels) {
       this.boxyElement.panels = this.panels;
     }
+    if (this.menu) {
+      this.boxyElement.menu = this.menu;
+    }
   }
 
   /**
