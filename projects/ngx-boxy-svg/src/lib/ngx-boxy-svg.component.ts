@@ -9,10 +9,13 @@ import {
 } from '@angular/core';
 import { NgxBoxySvgService } from './ngx-boxy-svg.service';
 import {
-  JPEGFileOptions,
-  PDFFileOptions,
   PNGFileOptions,
+  JPEGFileOptions,
   WebPFileOptions,
+  GIFFileOptions,
+  SVGFileOptions,
+  HTMLFileOptions,
+  PDFFileOptions,
 } from './models/file-options.interface';
 
 @Component({
@@ -300,7 +303,7 @@ export class NgxBoxySvgComponent implements OnInit {
    */
   public export(
     options: Array<
-      PNGFileOptions | JPEGFileOptions | WebPFileOptions | PDFFileOptions
+      PNGFileOptions | JPEGFileOptions | WebPFileOptions | GIFFileOptions | SVGFileOptions | HTMLFileOptions |PDFFileOptions
     >,
   ): Promise<Array<Blob>> {
     if (this.boxyElement) {
