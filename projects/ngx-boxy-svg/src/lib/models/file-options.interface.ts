@@ -29,7 +29,7 @@ export interface WebPFileOptions {
   width?: number | 'auto';
   height?: number | 'auto';
   scale?: number;
-  compression?: {value:number, lossy:boolean};
+  compression?: { value: number; lossy: boolean };
   background?: string;
   antiAliasing?: boolean;
   animation?: number | null;
@@ -54,7 +54,15 @@ export interface SVGFileOptions {
   height?: number | 'auto';
   units?: 'px' | 'cm' | 'mm' | 'in' | 'pt' | 'pc' | 'q' | '%';
   compression?: number;
-  normalization: 'web-static' | 'web-secure-static' | 'web-animated' | 'web-secure-animated' | 'web-dynamic-interactive' | 'boxy-svg' | 'lightburn' | null;
+  normalization:
+    | 'web-static'
+    | 'web-secure-static'
+    | 'web-animated'
+    | 'web-secure-animated'
+    | 'web-dynamic-interactive'
+    | 'boxy-svg'
+    | 'lightburn'
+    | null;
 }
 
 export interface HTMLFileOptions {

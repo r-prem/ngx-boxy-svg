@@ -303,7 +303,13 @@ export class NgxBoxySvgComponent implements OnInit {
    */
   public export(
     options: Array<
-      PNGFileOptions | JPEGFileOptions | WebPFileOptions | GIFFileOptions | SVGFileOptions | HTMLFileOptions |PDFFileOptions
+      | PNGFileOptions
+      | JPEGFileOptions
+      | WebPFileOptions
+      | GIFFileOptions
+      | SVGFileOptions
+      | HTMLFileOptions
+      | PDFFileOptions
     >,
   ): Promise<Array<Blob>> {
     if (this.boxyElement) {
