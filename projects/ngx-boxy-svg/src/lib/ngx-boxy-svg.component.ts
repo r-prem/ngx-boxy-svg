@@ -87,7 +87,7 @@ export class NgxBoxySvgComponent implements OnInit {
 
   /**
    * IDs of panels to be loaded.
-   * @default ["fill", "stroke", "compositing", "typography", "geometry", "meta", "shape", "arrangement", "objects", "defs", "library", "generators", "export", "history", "elements", "animations"]
+   * @default ["fill", "stroke", "compositing", "typography", "geometry", "meta", "objects", "defs", "library", "generators", "export", "history", "elements", "animations"]
    */
   @Input() panels: string[] | undefined;
 
@@ -305,6 +305,21 @@ export class NgxBoxySvgComponent implements OnInit {
   ): Promise<Array<Blob>> {
     if (this.boxyElement) {
       return this.boxyElement.export(options);
+    }
+    throw new Error(this.notLoadedMessage);
+  }
+
+  /**
+   * Insert your own HTML fragment into the app menu.
+   * @param selector - CSS selector pointing the target element
+   * @param position - either "beforebegin", "afterbegin", "beforeend" or "afterend"
+   * @param menuHTML
+   * @returns Promise<void>
+   * @throws Error if the Boxy SVG element is not initialized
+   */
+  public insertMenuHTML(selector: string, position: string, menuHTML: string): Promise<void> {
+    if (this.boxyElement) {
+      return this.boxyElement.insertMenuHTML(selector, position, menuHTML);
     }
     throw new Error(this.notLoadedMessage);
   }

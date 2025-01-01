@@ -78,6 +78,9 @@ Executes a command by its ID.
 ### `export(options: Array<PNGFileOptions | JPEGFileOptions | WebPFileOptions | PDFFileOptions>): Promise<Array<Blob>>`
 Exports the currently edited SVG document to a file. Returns an array of exported files as blobs.
 
+### `insertMenuHTML(selector: string, position: string, menuHTML: string): Promise<void>`
+Insert your own HTML fragment into the app menu.
+
 ## Example
 
 ```typescript
