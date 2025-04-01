@@ -1,6 +1,6 @@
 {
   "name": "ngx-boxy-svg",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This library acts as a wrapper to provide a simple way to include boxy-svg (https://boxy-svg.com/embed) into your Angular project.\nThis component integrates the powerful Boxy SVG editor into your Angular application, providing a rich set of features for SVG manipulation and export.",
   "author": "Raffael Prem (https://github.com/r-prem)",
   "license": "MIT",
