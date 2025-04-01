@@ -19,11 +19,12 @@ import {
 } from './models/file-options.interface';
 
 @Component({
-  selector: 'ngx-boxy-svg',
-  exportAs: 'ngxBoxySvg',
-  template: '',
-  styles: [],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'ngx-boxy-svg',
+    exportAs: 'ngxBoxySvg',
+    template: '',
+    styles: [],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class NgxBoxySvgComponent implements OnInit {
   private boxyElement: any | null = null;
