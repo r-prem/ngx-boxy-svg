@@ -1,6 +1,6 @@
 {
   "name": "ngx-boxy-svg",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "peerDependencies": {
     "@angular/common": ">=14.0.0",
     "@angular/core": ">=14.0.0"

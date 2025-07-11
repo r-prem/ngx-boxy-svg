@@ -46,33 +46,33 @@ export class NgxBoxySvgComponent implements OnInit {
   /**
    * URL to the app logo.
    * Shown by the "About" dialog.
-   * @default "https://boxy-svg.com/logo.svg"
+   * @default "https://boxy-svg.com/node_modules/@boxy-svg/boxy-svg/logo.svg"
    */
   @Input() logo: string | undefined;
 
   /**
    * URL to the app main menu in HTML format.
-   * @default "https://boxy-svg.com/menus/default.html"
+   * @default "https://boxy-svg.com/node_modules/@boxy-svg/boxy-svg/menus/default.html"
    */
   @Input() menu: string | undefined;
 
   /**
    * URL to the UI localization file in Fluent format.
    * If multiple URLs are provided, subsequent files will be used as a fallback when a message is not found in the primary file.
-   * @default "https://boxy-svg.com/locales/en.ftl"
+   * @default "https://boxy-svg.com/node_modules/@boxy-svg/boxy-svg/locales/en.ftl"
    */
   @Input() locale: string | undefined;
 
   /**
    * URL to the UI theme file in CSS format.
-   * @default "https://boxy-svg.com/themes/fluent.css"
+   * @default "https://boxy-svg.com/node_modules/@boxy-svg/boxy-svg/themes/fluent.css"
    */
   @Input() theme: string | undefined;
 
   /**
    * URL to the iconset file in SVG format.
    * If multiple URLs are provided, subsequent files will be used as a fallback when an icon is not found in the primary file.
-   * @default "https://boxy-svg.com/icons/default.svg"
+   * @default "https://boxy-svg.com/node_modules/@boxy-svg/boxy-svg/icons/default.svg"
    */
   @Input() icons: string | string[] | undefined;
 
