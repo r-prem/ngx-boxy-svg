@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class NgxBoxySvgService {
-  private scriptURL: string = 'https://boxy-svg.com/node_modules/@boxy-svg/boxy-svg/embed.js';
+  private scriptURL: string = 'https://boxy-svg.com/node_modules/@boxy-svg/boxy-svg/boxy-svg.js';
 
   public scriptElement: HTMLScriptElement | undefined;
 
